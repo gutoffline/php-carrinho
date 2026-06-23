@@ -20,7 +20,7 @@ include "inc/header.php";
         echo "<td>{$linha['NOME']}</td>";
         echo "<td>{$linha['QTD']}</td>";
         echo "<td>{$linha['PRECO']}</td>";
-        echo "<td><button class='btn  btn-outline-success'><i class='bi bi-cart-plus'></i>
+        echo "<td><button class='btn  btn-outline-success'><i class='bi bi-cart-plus' onclick='fnAdicionarNoCarrinho({$linha['ID']})'></i>
 </button>";
         echo "</tr>";
     }
