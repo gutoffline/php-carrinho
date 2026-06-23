@@ -3,13 +3,13 @@ include "inc/header.php";
 include "inc/conn.php";
 ?>
 <h1>Produtos</h1>
-<table border="2">
+<table class="table table-striped table-hover">
     <tr>
         <th>ID</th>
         <th>PRODUTO</th>
         <th>QUANTIDADE ATUAL</th>
         <th>PREÇO</th>
-        <th>AÇÕES</th>
+        <th>&nbsp;</th>
     </tr>
 <?php
     $sql = "select * from tb_produtos";
@@ -20,7 +20,8 @@ include "inc/conn.php";
         echo "<td>{$linha['NOME']}</td>";
         echo "<td>{$linha['QTD']}</td>";
         echo "<td>{$linha['PRECO']}</td>";
-        echo "<td><button>adicionar ao carrinho</button>";
+        echo "<td><button class='btn  btn-outline-success'><i class='bi bi-cart-plus'></i>
+</button>";
         echo "</tr>";
     }
 ?>
