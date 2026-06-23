@@ -11,3 +11,6 @@
 
 <body>
     <main class="container">
+        <a href="carrinho.php" class="btn btn-success mb-4 mt-3 ms-auto">
+            <i class='bi bi-cart'> <span class="badge text-bg-primary">0</span></i>
+        </a>

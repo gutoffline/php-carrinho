@@ -1,6 +1,6 @@
 <?php
-include "inc/header.php";
 include "inc/conn.php";
+include "inc/header.php";
 ?>
 <h1>Produtos</h1>
 <table class="table table-striped table-hover">
