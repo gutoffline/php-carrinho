@@ -24,7 +24,7 @@ include "inc/header.php";
 </button>";
         echo "</tr>";
     }
-?>
+?> 
 </table>
 <?php
 mysqli_close($conexao);
