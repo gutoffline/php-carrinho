@@ -1,0 +1,1 @@
+SELECT tb_vendas.DATA_HORA, tb_clientes.NOME, tb_produtos.NOME , tb_itens_venda.QTD_VENDIDO, tb_produtos.PRECO from tb_vendas inner join tb_itens_venda on tb_vendas.id = tb_itens_venda.ID_VENDA inner join tb_produtos on tb_produtos.id = tb_itens_venda.ID_PRODUTO inner join tb_clientes on tb_clientes.id = tb_vendas.ID_CLIENTE;
