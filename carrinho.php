@@ -35,9 +35,14 @@ include "inc/header.php";
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td align="right">TOTAL</td>
-        <td> <?=$total?> </td>
+        <td> <span id="total"><?=$total?></span> </td>
     </tr>
 </table>
+<form id="form_venda" method="post" action="venda.php">
+    <input name="produtos" id="produtos_venda">
+    <input name="total" id="total_venda">
+    <button type="button" class="btn btn-success" onclick="fnFecharCompra()">FECHAR COMPRA</button>
+</form>
 <?php
 mysqli_close($conexao);
 include "inc/footer.php";

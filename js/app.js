@@ -45,4 +45,12 @@ function fnExcluir(id){
     
 }
 
+
+function fnFecharCompra(){
+    document.getElementById("produtos_venda").value = document.getElementById("produtos").value
+    document.getElementById("total_venda").value = document.getElementById("total").innerText
+    document.getElementById("form_venda").submit()
+
+}
+
 fnMostrarNumeroDeProdutos()
