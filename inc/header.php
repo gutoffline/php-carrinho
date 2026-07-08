@@ -11,6 +11,9 @@
 
 <body>
     <main class="container">
-        <a href="carrinho.php" class="btn btn-success mb-4 mt-3 ms-auto">
-            <i class='bi bi-cart'> <span class="badge text-bg-primary" id="numero_de_produtos">0</span></i>
-        </a>
+        <form method="post" action="carrinho.php">
+            <button type="submit" class="btn btn-success mb-4 mt-3 ms-auto">
+                <i class='bi bi-cart'> <span class="badge text-bg-primary" id="numero_de_produtos">0</span></i>
+            </button>
+            <input type="hidden" name="produtos" id="produtos">
+        </form>
