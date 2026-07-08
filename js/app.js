@@ -29,6 +29,20 @@ function fnMostrarNumeroDeProdutos(){
     document.getElementById("produtos").value=listaDosProdutos
 }
 
+function fnExcluir(id){
+    document.getElementById("linha"+id).remove()
+    let lista_dos_codigos = localStorage.getItem("lista_dos_codigos")
+    let listaDosProdutos = JSON.parse(lista_dos_codigos) || []
 
+    let listaNova = listaDosProdutos.filter(item => item !== id)
+    console.log(listaNova)
+
+    localStorage.setItem("lista_dos_codigos", JSON.stringify(listaNova))
+    document.getElementById("produtos").value = listaNova
+
+    document.getElementById("form_produtos").submit()
+
+    
+}
 
 fnMostrarNumeroDeProdutos()

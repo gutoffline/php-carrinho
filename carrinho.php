@@ -10,6 +10,7 @@ include "inc/header.php";
         <th>ID</th>
         <th>PRODUTO</th>
         <th>PREÇO</th>
+        <th>&nbsp;</th>
     </tr>
 <?php
     $listaDeProdutos = $_POST['produtos'];
@@ -19,10 +20,11 @@ include "inc/header.php";
 
     $resultado = mysqli_query($conexao, $sql);
     while($linha = mysqli_fetch_assoc($resultado)){
-        echo "<tr>";
+        echo "<tr id='linha{$linha['ID']}'>";
         echo "<td>{$linha['ID']}</td>";
         echo "<td>{$linha['NOME']}</td>";
         echo "<td>{$linha['PRECO']}</td>";
+        echo "<td><button class='btn btn-danger' onclick='fnExcluir({$linha['ID']})'>Excluir</button></td>";
         $total = $linha['TOTAL']; 
         
         echo "</tr>";
@@ -30,6 +32,7 @@ include "inc/header.php";
      
 ?> 
     <tr>
+        <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td align="right">TOTAL</td>
         <td> <?=$total?> </td>
